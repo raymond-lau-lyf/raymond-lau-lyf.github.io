@@ -19,7 +19,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi there!:sparkles:I'm Yufeng Liu, a student interested in `SLAM` and `Robotics`.[MyGithubHomepage](https://github.com/raymond-lau-lyf)
+Hi there!:sparkles:I'm Yufeng Liu, a student interested in `SLAM` and `Robotics`.I am studying for a bachelor's degree in Harbin Institute of Technology(Shenzhen)(HITSZ).
+
+[My Github Homepage](https://github.com/raymond-lau-lyf)
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
