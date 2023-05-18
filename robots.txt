@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://raymond-lau-lyf.github.io/blog//sitemap.xml
+Sitemap: https://raymond-lau-lyf.github.io/sitemap.xml
