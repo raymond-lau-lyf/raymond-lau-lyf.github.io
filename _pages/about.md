@@ -21,6 +21,6 @@ Hi there!:sparkles:I'm Yufeng Liu, a student interested in `SLAM` and `Robotics`
 
 [My Github Homepage](https://github.com/raymond-lau-lyf)
 
-[My Curriculum Vitae](/al-folio/publications/)
+[My Curriculum Vitae](https://raymond-lau-lyf.github.io/cv/)
 
-[Publications](/al-folio/publications/)
+[Publications](https://raymond-lau-lyf.github.io/publications/)
