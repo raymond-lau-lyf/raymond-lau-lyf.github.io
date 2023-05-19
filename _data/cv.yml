@@ -76,7 +76,19 @@
     - As the team leader, I coordinated task allocation and fostered collaboration among team members. Additionally, I served as the designer of embedded software.
     - Developed a software framework programmed in C for the STM32 microcontroller, encompassing essential functions including a full-automatic state machine, motor control, communication, and more.
 
+  - title: Research on underwater mechincal grab robot
+    institution: Lujian Technology Ltd.Co.,Shenzhen
+    year: 2022.7--2022.12
+    description:
+    - Participated in the research of underwater robot design, contributed to the execution of underwater motion control.
 
+  - title: Developed a ROS-based navigation system for a car equipped with 2D LiDAR for navigation and utilized OpenCV for line following capabilities
+    institution: HITsz Freshman Term Annual Project Design,HITSZ
+    year: 2020.10--2021.10
+    description:
+    - Applied the ROS Navigation package for navigation of a mini mecanum wheel car.
+    - Implemented custom code for line following using OpenCV.
+    - Evaluated the performance of Cartographer for mapping and localization on the car.
 
 - title: Open Source Projects
   type: time_table
@@ -96,19 +108,35 @@
     items:
     - Max Planck Medal
 
+#  title: [National]First Prize of RoboMaster University Championship
+#     year: 2022.8
+
+#   # - year: 2022
+#   #   items:
+#   #   - [2022.8 National]First Prize of RoboMaster University Championship
+#   # - year: 2021
+#   #   items:
+#   #   - [2021.8 National]First Prize of RoboMaster University Championship
+#   #   - [2021.9 National]Thrid Prize of ChinaUndergraduate Mathematical Contest in Modelling
+#   # - year: 2020
+#   #   items:
+#   #   - [2020.12 Inter-school]First Prize with First Place among all students of Competion of the Robot Design and Practice Course
+
 - title: Academic Interests
   type: nested_list
   contents:
-  - title: Topic 1.
+  - title: SLAM
     items:
-    - Description 1.
-    - Description 2.
-  - title: Topic 2.
+    - VIO
+    - LIO
+    - Multi-Sensor
+    - Dynamic
+  - title: Robotics
     items:
-    - Description 1.
-    - Description 2.
+    - Robotics
+    - Embedded software
 
 - title: Other Interests
   type: list
   contents:
-  - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+  - <u>Hobbies:</u> badminton, basketball, swimming etc.
