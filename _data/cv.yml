@@ -100,11 +100,11 @@
 - title: Honors and Awards
   type: time_table
   contents:
-  - year: 1921
+  - year: 2022
     items:
     - Nobel Prize in Physics
     - Matteucci Medal
-  - year: 2029
+  - year: 2021
     items:
     - Max Planck Medal
 
@@ -129,12 +129,12 @@
     items:
     - VIO
     - LIO
-    - Multi-Sensor
+    - Multi Sensor Fusion
     - Dynamic
   - title: Robotics
     items:
     - Robotics
-    - Embedded software
+    - Embedded software & control
 
 - title: Other Interests
   type: list
