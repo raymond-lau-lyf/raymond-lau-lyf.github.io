@@ -13,7 +13,7 @@
   contents:
   - title: Bachelor of Engineering in Automation
     institution: Harbin Institute of Technology(Shenzhen)
-    year: 2020
+    year: 2020-present
     # description:
     # - Description 1.
     # - Description 2.
@@ -32,35 +32,51 @@
 - title: Experience
   type: time_table
   contents:
-  - title: Professor of Theoretical Physics
-    institution: Institute for Advanced Study, Princeton University
-    year: 1933 - 1955
+  - title: Research on SLAM algorithms specifically designed for thermal infrared cameras.
+    institution: nROS-Lab,HITSZ
+    year: 2022.3 - 2022.12
     description:
-    - Description 1.
-    - Description 2.
-    - title: Description 3.
-      contents:
-      - Sub-description 1.
-      - Sub-description 2.
-  - title: Visiting Professor
-    institution: California Institute of Technology, Pasadena, California, US
-    year: 1933
+    - Implemented experiments on extreme environments and datasets.
+    - Participated in the implementation and debugging of the algorithm.
+    - Evaluated state-of-the-art Monocular VIO like VINS-Mono, ORB-SLAM3, DM-VIO, ROVIO, PL-VINS, etc. on both our experiment data and open source datasets.
+    - Our results are published in the form of articles in RA-L
+    # - title: Description 3.
+    #   contents:
+    #   - Sub-description 1.
+    #   - Sub-description 2.
+
+  - title: Research on sensor fusion SLAM techniques that combine data from thermal cameras, LiDAR, and IMU sensors.
+    institution: nROS-Lab,HITSZ
+    year: 2022.9--present
     description:
-    - Description 1.
-    - Description 2.
+    - Proposing a SLAM framework that fuses thermal camera, LiDAR and IMU.
+    - Evaluated state-of-the-art LIO or LVIO like FAST-LIO, LIO-SAM, LVI-SAM, R2Live, R3Live, FAST-LIVO, etc.
+    - Applied multiple ways to achive multi-sensor extrinc parameters calibration, like camera-IMU, LiDAR-IMU and Camera-LiDAR.Also, explored multiple approaches to perform time synchronization between sensors, including PTP, PPS(GNSS triggered or STM32 triggered).
 
-  - title: Director
-    institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-    year: 1917-1933
-
-  - title: Professor of Theoretical Physics
-    institution: Karl-Ferdinand University, Prague, Czechoslovakia
-    year: 1911 - 1917
+  - title: Research on a teleoperated robot equipped with a virtual reality (VR) remote-controlled gimbal system.
+    institution: nROS-Lab,HITSZ
+    year: 2023.1--present
     description:
+    - Designed a two-axis gimbal for mobile robots.
+    - Designed the 3D model by SolidWorks; implemented LQR and PID controllers for realtime gimbal pose control by coding on STM32.
+    - utilized the onboard BMI088 IMU for attitude estimation; established communication between STM32 and Intel NUC using CAN Bus.
+    - Successfully developed a ROS node that subscribes to human control commands through Unity-ROS-TCP-Endpoint from a remote location and sends control messages to the STM32.
 
-  - title: Associate Professor of Theoretical Physics
-    institution: University of Zurich, Zurich, Switzerland
-    year: 1909 - 1911
+  - title: Research on a deep learning-based framework for removing dynamic objects from pointcloud data
+    institution: ROS-Lab,HITSZ
+    year: 2023.1--present
+    description: -Implemented shared memory to accelerate the transfer of point cloud data between a C++ ROS node and a Python PyTorch-based detection node.
+
+  - title: Team leader of Sentry Robot Group in RoboMaster competion
+    institution: Critical-HIT robot team,HITSZ
+    year: 2021.8--2022.8
+    description:
+    - Led the Sentry Robot Group in the HITsz Critical-HIT RoboMaster Team.
+    - Designed a fully automatic inspection and combat integrated robot.
+    - As the team leader, I coordinated task allocation and fostered collaboration among team members. Additionally, I served as the designer of embedded software.
+    - Developed a software framework programmed in C for the STM32 microcontroller, encompassing essential functions including a full-automatic state machine, motor control, communication, and more.
+
+
 
 - title: Open Source Projects
   type: time_table
