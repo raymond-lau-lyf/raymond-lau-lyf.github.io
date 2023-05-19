@@ -14,19 +14,20 @@
   - title: Bachelor of Engineering in Automation
     institution: Harbin Institute of Technology(Shenzhen)
     year: 2020
-    description:
-    - Description 1.
-    - Description 2.
-    - title: Description 3.
-      contents:
-      - Sub-description 1.
-      - Sub-description 2.
-      # - title: Federal teaching diploma
-      #   institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      #   year: 1900
-      #   description:
-      #     - Description 1.
-      #     - Description 2.
+    # description:
+    # - Description 1.
+    # - Description 2.
+    # - title: Description 3.
+    #   contents:
+    #   - Sub-description 1.
+    #   - Sub-description 2.
+
+    # - title: Federal teaching diploma
+    #   institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+    #   year: 1900
+    #   description:
+    #     - Description 1.
+    #     - Description 2.
 
 - title: Experience
   type: time_table
