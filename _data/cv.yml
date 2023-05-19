@@ -102,22 +102,12 @@
   contents:
   - year: 2022
     items:
-    - Nobel Prize in Physics
-    - Matteucci Medal
+    - [National]First Prize of RoboMaster University Championship
   - year: 2021
     items:
-    - Max Planck Medal
+    - [National]First Prize of RoboMaster University Championship
+    - [National]Thrid Prize of ChinaUndergraduate Mathematical Contest in Modelling
 
-#  title: [National]First Prize of RoboMaster University Championship
-#     year: 2022.8
-
-#   # - year: 2022
-#   #   items:
-#   #   - [2022.8 National]First Prize of RoboMaster University Championship
-#   # - year: 2021
-#   #   items:
-#   #   - [2021.8 National]First Prize of RoboMaster University Championship
-#   #   - [2021.9 National]Thrid Prize of ChinaUndergraduate Mathematical Contest in Modelling
 #   # - year: 2020
 #   #   items:
 #   #   - [2020.12 Inter-school]First Prize with First Place among all students of Competion of the Robot Design and Practice Course
