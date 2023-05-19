@@ -90,12 +90,12 @@
     - Implemented custom code for line following using OpenCV.
     - Evaluated the performance of Cartographer for mapping and localization on the car.
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-  - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-    year: 2015-now
-    description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#   - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#     year: 2015-now
+#     description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
