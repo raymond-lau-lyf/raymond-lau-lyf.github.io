@@ -267,8 +267,8 @@ display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags wil
 
 scholar:
 
-  last_name: [Yufeng]
-  first_name: [Liu]
+  last_name: [Liu]
+  first_name: [Yufeng]Liu
 
   style: apa
   locale: en
