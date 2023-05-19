@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href=mailto:raymond.lau.lyf@gmail.com'>raymond.lau.lyf@gmail.com</a>
+subtitle: <a href=mailto:raymond.lau.lyf@gmail.com>raymond.lau.lyf@gmail.com</a>
 
 profile:
   align: right
