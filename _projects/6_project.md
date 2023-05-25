@@ -4,7 +4,7 @@ title: HITsz Freshman Term Annual Project Design
 description: ROS-based navigation system for a car equipped with 2DLiDAR for navigation and utilized OpenCV for line following capabilities
 img: assets/img/freshman.gif
 importance: 4
-category: fun
+category: Course Projects
 ---
 
 Every project has a beautiful feature showcase page.

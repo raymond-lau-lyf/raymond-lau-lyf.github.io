@@ -5,7 +5,7 @@ description: a fully automatic inspection and combat integrated robot in RoboMas
 img: assets/img/robomaster.jpg
 redirect: https://robomaster.com
 importance: 3
-category: work
+category: Research
 ---
 
 Every project has a beautiful feature showcase page.

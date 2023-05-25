@@ -4,7 +4,7 @@ title: DIP Course project
 description: Digital Image Progress Course Design Project
 img: assets/img/DIP.gif
 importance: 3
-category: fun
+category: Course Projects
 ---
 
 Every project has a beautiful feature showcase page.

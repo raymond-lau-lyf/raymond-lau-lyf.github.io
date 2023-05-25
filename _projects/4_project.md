@@ -2,9 +2,9 @@
 layout: page
 title: An Underwater robot
 description: an nderwater grab robot control and navigation
-img: 
+img: assets/img/underwater.jpg
 importance: 3
-category: fun
+category: Research
 ---
 
 Every project has a beautiful feature showcase page.

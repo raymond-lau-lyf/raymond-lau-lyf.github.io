@@ -4,7 +4,7 @@ title: Multi sensor SLAM algorithm in complex environments.
 description: Multi sensor SLAM algorithm in complex environments.
 img: assets/img/multiSLAM.gif
 importance: 2
-category: work
+category: Research
 ---
 
 Every project has a beautiful feature showcase page.

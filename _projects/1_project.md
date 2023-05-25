@@ -4,7 +4,7 @@ title:  Thermal-Inertial Odometry
 description: an Edge-Based Monocular Thermal-Inertial Odometry
 img: assets/img/ETIOtest.gif
 importance: 1
-category: work
+category: Research
 ---
 
 Every project has a beautiful feature showcase page.

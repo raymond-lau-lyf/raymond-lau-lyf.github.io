@@ -5,7 +5,7 @@ permalink: /projects/
 description: Projects (updating...).
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [Research, Course Projects]
 horizontal: false
 ---
 
