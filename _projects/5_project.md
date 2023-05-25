@@ -1,7 +1,7 @@
 ---
 layout: page
 title: traking ROS robot with YOLOv5 and OpenCV 
-description: Digital Image Progress Course Design Project
+description: HITSZ Digital Image Progress Course Design Project
 img: assets/img/DIP.gif
 importance: 3
 category: Course Projects
