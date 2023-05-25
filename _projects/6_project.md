@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
+title: HITsz Freshman Term Annual Project Design
+description: ROS-based navigation system for a car equipped with 2DLiDAR for navigation and utilized OpenCV for line following capabilities
+img: assets/img/freshman.gif
 importance: 4
 category: fun
 ---

@@ -3,7 +3,7 @@ layout: page
 title: RoboMaster Sentry Robot 
 description: a fully automatic inspection and combat integrated robot in RoboMaster.
 img: assets/img/robomaster.jpg
-redirect: https://unsplash.com
+redirect: https://robomaster.com
 importance: 3
 category: work
 ---

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: An Underwater robot
+description: an nderwater grab robot control and navigation
+img: 
 importance: 3
 category: fun
 ---
