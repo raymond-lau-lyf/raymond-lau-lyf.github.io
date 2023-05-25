@@ -1,7 +1,7 @@
 ---
 layout: page
 title: An Underwater robot
-description: an nderwater grab robot control and navigation
+description: an underwater grab robot control and navigation
 img: assets/img/underwater.jpg
 importance: 3
 category: Research

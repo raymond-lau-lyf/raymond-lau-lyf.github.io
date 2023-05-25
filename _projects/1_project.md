@@ -3,6 +3,7 @@ layout: page
 title:  Thermal-Inertial Odometry
 description: an Edge-Based Monocular Thermal-Inertial Odometry
 img: assets/img/ETIOtest.gif
+redirect: https://www.nrs-lab.com/2023/02/16/etio/
 importance: 1
 category: Research
 ---
