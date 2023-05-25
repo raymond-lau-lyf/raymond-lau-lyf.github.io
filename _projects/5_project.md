@@ -1,6 +1,6 @@
 ---
 layout: page
-title: DIP Course project
+title: traking ROS robot with YOLOv5 and OpenCV 
 description: Digital Image Progress Course Design Project
 img: assets/img/DIP.gif
 importance: 3
