@@ -1,7 +1,7 @@
 ---
 layout: page
-title: naviagtion robot equipped with 2D-LiDAR
-description: ROS-based navigation system for a car equipped with 2D-LiDAR for navigation and utilized OpenCV for line following capabilities
+title: naviagtion robot equipped with 2D-LiDAR and OpenCV
+description: hitsz freshman term annual project design
 img: assets/img/freshman.gif
 importance: 4
 category: Course Projects
