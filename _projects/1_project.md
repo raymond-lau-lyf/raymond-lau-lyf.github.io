@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  Thermal-Inertial Odometry
-description: a project with a background image
+description: an Edge-Based Monocular Thermal-Inertial Odometry
 img: assets/img/ETIOtest.gif
 importance: 1
 category: work
