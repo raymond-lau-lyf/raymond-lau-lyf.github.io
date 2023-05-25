@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
+title: RoboMaster Sentry Robot 
+description: a fully automatic inspection and combat integrated robot in RoboMaster.
+img: assets/img/robomaster.jpg
 redirect: https://unsplash.com
 importance: 3
 category: work
