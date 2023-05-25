@@ -1,8 +1,8 @@
 ---
 layout: page
-title: VR remote-controlled gimbal system
-description: Teleoperated pitch-yaw gimbal, which can be used for SLAM platforms
-img: assets/img/gimbal.png
+title: Underwater robot
+description: an underwater grab robot control and navigation
+img: assets/img/underwater.jpg
 importance: 3
 category: Research
 ---
