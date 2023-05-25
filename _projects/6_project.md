@@ -1,6 +1,6 @@
 ---
 layout: page
-title: naviagtion robot equipped with 2D-LiDAR and OpenCV
+title: naviagtion robot equipped with 2D-LiDAR
 description: hitsz freshman term annual project design
 img: assets/img/freshman.gif
 importance: 4
