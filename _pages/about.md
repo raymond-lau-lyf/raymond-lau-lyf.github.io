@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi there!:sparkles:I'm Yufeng Liu, a student interested in `SLAM` and `Robotics`.I am studying for a bachelor's degree in Harbin Institute of Technology(Shenzhen)(HITSZ).
+Hi there!:sparkles:I'm Yufeng Liu(刘羽丰), a student interested in `SLAM` and `Robotics`.I am studying for a bachelor's degree in Harbin Institute of Technology(Shenzhen)(HITSZ).
 
 [My Github Homepage](https://github.com/raymond-lau-lyf)
 
