@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{xcolor, soul}
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+ 
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Yufeng}{Liu}
+\title{curriculum vitae}   
+\AtEndPreamble{
+  \hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=cyan
+}}
+% \address{Harbin Institute of Technology(Shenzhen)}{Shenzhen}{China}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+% \phone[mobile]{+86~13029155000}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{raymond.lau.lyf@gmail.com}                              % optional, remove / comment the line if not wanted
+\extrainfo{\emailsymbol\emaillink{200320408@stu.hit.edu.cn}}
+\homepage{raymond-lau-lyf.github.io}                         % optional, remove / comment the line if not wanted
+
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+
+%-----       resume       ---------------------------------------------------------
+\makecvtitle 
+
+\section{Education}
+\cventry{Sept.2020--present}{B.Eng. in Automation  GPA:3.6/4.0}{Harbin Institute of Technology(Shenzhen)}{Shenzhen,China}{}{} % arguments 3 to 6 can be left empty
+
+
+\section{Experience}
+
+\cventry{Oct.2021-present}{}{Multi sensor SLAM algorithm in complex environments.}{\href{https://www.nrs-lab.com/}{nROS-Lab},HITsz}{}%
+{
+\begin{itemize}%
+\item Participated in the implementation and experiment of an Edge-Based Monocular Thermal-Inertial Odometry \hyperref[sec:Publications]{[detailed in our publication]} (2021.10-2022.12).
+\begin{itemize}%
+\hypersetup{urlcolor=black}
+\item Achieved a simulation system in \href{https://gazebosim.org/api/gazebo/2.10/index.html}{Ignition Gazebo} for SLAM in complex extreme environments.
+\item Deployed our \hyperref[sec:Publications]{ETIO} in the real world and conducted experiments in the real world and datasets.
+\item Familiar with the system framework of Monocular VIOs like VINS-Mono, etc.
+\item Skilled in  VIO deployment in the real world.
+\item Skilled in thermal image processing.
+\end{itemize}
+\item Proposing a SLAM framework that fuses thermal camera, LiDAR, and IMU.
+\begin{itemize}%
+\item Built a code framework fused sensors using ESIKF and factor graph optimization. 
+\item Skilled in ways to achieve multi-sensor extrinsic parameter calibration.
+\item Skilled in approaches to perform time synchronization between sensors, including PTP, and PPS (GNSS triggered or STM32 triggered).
+\item Familiar with the system framework of LIO or LVIO like FAST-LIO, LIO-SAM, LVI-SAM, R2Live, R3Live, FAST-LIVO, etc.
+\end{itemize}
+\item Participated in the implementation of a SLAM system integrated planning and dynamic obstacle avoidance.  
+\begin{itemize}%
+\item Achieved a pointcloud object detection system detecting moving targets.
+\item Applied deep-learning method for removing dynamic objects from pointcloud data to optimize the LiDAR odometry.
+\item Implemented shared memory method to accelerate the transfer of point cloud data between a C++ ROS node and a Python PyTorch-based detection node.
+\end{itemize}
+\end{itemize}
+}
+
+\cventry{Dec.2022--present}{}{Teleoperated robot equipped with a VR remote-controlled gimbal system.}{\href{https://www.nrs-lab.com/}{nROS-Lab},HITsz}{}%
+{
+\begin{itemize}%
+\item Designed a two-axis gimbal with sensors for mobile robots:
+\begin{itemize}%
+\item Designed the 3D model using SolidWorks and implemented real-time gimbal control using STM32.
+\item Developed a ROS node that subscribes to human control commands through Unity-ROS-TCP-Endpoint from a remote location and sends control messages to the STM32.
+\item Developed Multi-sensor SLAM algorithm on the gimbal.  
+\end{itemize}
+\end{itemize}
+}
+
+\cventry{Aug.2021--Aug.2022}{}{Team leader of Sentry Robot Group in \href{http://www.robomaster.com}{RoboMaster} competition}{Critical-HIT robot team,HITsz}{}%
+{
+\begin{itemize}%
+\item Led the Sentry Robot Group in HITsz Critical-HIT RoboMaster Team.
+\begin{itemize}
+\item Designed a fully automatic inspection and combat integrated robot.
+\item Coordinated task allocation and fostered collaboration among team members as team leader.
+\item Integrated fully automatic electronic control systems for the robot with STM32. 
+\item Developed target aiming algorithm framework, including detection with YOLOv5 and tracking with OpenCV, EKF.
+\end{itemize}
+\end{itemize}
+}
+
+\cventry{May.2022--Dec.2022}{}{Underwater grab robot control and navigation}{Lujian Technology Ltd. Co.,Shenzhen}{}%
+{
+\begin{itemize}%
+    \item Participated in the research of underwater robot design and contributed to the execution of underwater motion control with STM32, IMU and underwater motors.
+    \item Achieved a mono VIO system in Gazebo which suits the underwater environment and a controller with the joystick.
+    \item Achieved underwater target detection using YOLOv5.
+\end{itemize}
+}
+
+
+\section{Skills}
+\cvitem{}{Programming: C++, C, Python, MATLAB}
+\cvitem{}{Software\&tools: ROS, OpenCV, Gazebo, PCL, GTSAM, Ceres, Git, PyTorch, LaTeX, Qt Creator, Unity }
+\cvitem{}{Hardware: STM32, SolidWorks}
+\cvitem{}{My Focus: SLAM, Robotics}
+
+
+\section{Publications}
+\label{sec:Publications}
+\cvitem{}{[1] Yu Wang, Haoyao Chen*, \textbf{Yufeng Liu}, and Shiwu Zhang. Edge-based monocular thermal-inertial odometry in visually degraded environments. IEEE Robotics and Automation Letters(RA-L), 8(4):2078-2085, 2023. \href{https://arxiv.org/abs/2210.10033}{[arxiv]}}
+
+
+\section{Awards}
+\begin{itemize}%
+    \item First Prize of 2022 RoboMaster University Championship\hfill 2022
+    \item First Prize of 2021 RoboMaster University Championship\hfill 2021
+    \item Third Prize of ChinaUndergraduate Mathematical Contest in Modelling\hfill 2021
+    \item First Place among all students of Competition of the HITsz Robot Design and Practice Course\hfill 2020
+\end{itemize}
+
+% \clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+%% end of file `template.tex'.
