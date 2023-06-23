@@ -47,52 +47,47 @@
 \cventry{Oct.2021-present}{}{Multi sensor SLAM algorithm in complex environments.}{\href{https://www.nrs-lab.com/}{nROS-Lab},HITsz}{}%
 {
 \begin{itemize}%
-\item Participated in the implementation and experiment of an Edge-Based Monocular Thermal-Inertial Odometry \hyperref[sec:Publications]{[detailed in our publication]} (2021.10-2022.12).
+\item Participated in the implementation and experiment of an Edge-Based Monocular Thermal-Inertial Odometry \hyperref[sec:Publications]{[publication]}.
 \begin{itemize}%
 \hypersetup{urlcolor=black}
 \item Achieved a simulation system in \href{https://gazebosim.org/api/gazebo/2.10/index.html}{Ignition Gazebo} for SLAM in complex extreme environments.
 \item Deployed our \hyperref[sec:Publications]{ETIO} in the real world and conducted experiments in the real world and datasets.
 \item Familiar with the system framework of Monocular VIOs like VINS-Mono, etc.
-\item Skilled in  VIO deployment in the real world.
 \item Skilled in thermal image processing.
 \end{itemize}
-\item Proposing a SLAM framework that fuses thermal camera, LiDAR, and IMU.
+\item Proposed a SLAM framework that fuses thermal camera, LiDAR, and IMU.
 \begin{itemize}%
-\item Built a code framework fused sensors using ESIKF and factor graph optimization. 
-\item Skilled in ways to achieve multi-sensor extrinsic parameter calibration.
-\item Skilled in approaches to perform time synchronization between sensors, including PTP, and PPS (GNSS triggered or STM32 triggered).
-\item Familiar with the system framework of LIO or LVIO like FAST-LIO, LIO-SAM, LVI-SAM, R2Live, R3Live, FAST-LIVO, etc.
+% \item Built a code framework fused sensors using ESIKF and factor graph optimization. 
+% \item Skilled in ways to achieve multi-sensor extrinsic parameter calibration.
+% \item Skilled in approaches to perform time synchronization between sensors, including PTP, and PPS.
+% \item Familiar with the system framework of LIO or LVIO like FAST-LIO, LIO-SAM, LVI-SAM, R2Live, R3Live, FAST-LIVO, etc.
+\item Familiar with Visual-IMU-LiDAR SLAM systems
+\item Skilled in multi-sensor implementation like extrinsic calibration, PTP or PPS time synchronization, etc.
 \end{itemize}
 \item Participated in the implementation of a SLAM system integrated planning and dynamic obstacle avoidance.  
 \begin{itemize}%
-\item Achieved a pointcloud object detection system detecting moving targets.
+% \item Achieved a pointcloud object detection system detecting moving targets.
 \item Applied deep-learning method for removing dynamic objects from pointcloud data to optimize the LiDAR odometry.
-\item Implemented shared memory method to accelerate the transfer of point cloud data between a C++ ROS node and a Python PyTorch-based detection node.
+% \item Implemented shared memory method to accelerate the transfer of point cloud data between a C++ ROS node and a Python PyTorch-based detection node.
+\end{itemize}
+\item Designed a two-axis gimbal with sensors for Teleoperated robot equipped with a VR remote-controlled gimbal system.
+\begin{itemize}%
+% \item Developed a ROS node that subscribes to human control commands through Unity-ROS-TCP-Endpoint from a remote location and sends control messages to the STM32.
+\item Designed the 3D model and implemented embedded control.
+\item Applied Multi-sensor SLAM algorithm on the gimbal.  
 \end{itemize}
 \end{itemize}
 }
 
-\cventry{Dec.2022--present}{}{Teleoperated robot equipped with a VR remote-controlled gimbal system.}{\href{https://www.nrs-lab.com/}{nROS-Lab},HITsz}{}%
-{
-\begin{itemize}%
-\item Designed a two-axis gimbal with sensors for mobile robots:
-\begin{itemize}%
-\item Designed the 3D model using SolidWorks and implemented real-time gimbal control using STM32.
-\item Developed a ROS node that subscribes to human control commands through Unity-ROS-TCP-Endpoint from a remote location and sends control messages to the STM32.
-\item Developed Multi-sensor SLAM algorithm on the gimbal.  
-\end{itemize}
-\end{itemize}
-}
-
-\cventry{Aug.2021--Aug.2022}{}{Team leader of Sentry Robot Group in \href{http://www.robomaster.com}{RoboMaster} competition}{Critical-HIT robot team,HITsz}{}%
+\cventry{Aug.2021--Aug.2022}{}{Team leader of Sentry Robot Group in \href{http://www.robomaster.com/en-US}{RoboMaster} competition}{Critical-HIT robot team,HITsz}{}%
 {
 \begin{itemize}%
 \item Led the Sentry Robot Group in HITsz Critical-HIT RoboMaster Team.
 \begin{itemize}
 \item Designed a fully automatic inspection and combat integrated robot.
 \item Coordinated task allocation and fostered collaboration among team members as team leader.
-\item Integrated fully automatic electronic control systems for the robot with STM32. 
-\item Developed target aiming algorithm framework, including detection with YOLOv5 and tracking with OpenCV, EKF.
+\item Integrated fully automatic embedded control systems for the robot. 
+\item Developed target aiming algorithm framework, including YOLO detection,EKF tracking, modelling, etc.
 \end{itemize}
 \end{itemize}
 }
@@ -100,9 +95,9 @@
 \cventry{May.2022--Dec.2022}{}{Underwater grab robot control and navigation}{Lujian Technology Ltd. Co.,Shenzhen}{}%
 {
 \begin{itemize}%
-    \item Participated in the research of underwater robot design and contributed to the execution of underwater motion control with STM32, IMU and underwater motors.
+    \item Participated in the research of underwater robot design and contributed to the execution of underwater motion control.
     \item Achieved a mono VIO system in Gazebo which suits the underwater environment and a controller with the joystick.
-    \item Achieved underwater target detection using YOLOv5.
+    \item Achieved learning based underwater target detection.
 \end{itemize}
 }
 
