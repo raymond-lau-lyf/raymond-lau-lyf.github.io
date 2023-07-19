@@ -1,5 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://raymond-lau-lyf.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://raymond-lau-lyf.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-18T16:59:57+00:00</updated><id>https://raymond-lau-lyf.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">notes of FEJ</title><link href="https://raymond-lau-lyf.github.io/blog/2023/math/" rel="alternate" type="text/html" title="notes of FEJ" /><published>2023-07-18T15:12:00+00:00</published><updated>2023-07-18T15:12:00+00:00</updated><id>https://raymond-lau-lyf.github.io/blog/2023/math</id><content type="html" xml:base="https://raymond-lau-lyf.github.io/blog/2023/math/"><![CDATA[<p>在VINS中</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="math" /><summary type="html"><![CDATA[notes of First-Estimate Jacobian]]></summary></entry><entry><title type="html">a post with math</title><link href="https://raymond-lau-lyf.github.io/blog/2015/math/" rel="alternate" type="text/html" title="a post with math" /><published>2015-10-20T15:12:00+00:00</published><updated>2015-10-20T15:12:00+00:00</updated><id>https://raymond-lau-lyf.github.io/blog/2015/math</id><content type="html" xml:base="https://raymond-lau-lyf.github.io/blog/2015/math/"><![CDATA[<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://raymond-lau-lyf.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://raymond-lau-lyf.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-19T17:56:34+00:00</updated><id>https://raymond-lau-lyf.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">notes of FEJ</title><link href="https://raymond-lau-lyf.github.io/blog/2023/math/" rel="alternate" type="text/html" title="notes of FEJ" /><published>2023-07-18T15:12:00+00:00</published><updated>2023-07-18T15:12:00+00:00</updated><id>https://raymond-lau-lyf.github.io/blog/2023/math</id><content type="html" xml:base="https://raymond-lau-lyf.github.io/blog/2023/math/"><![CDATA[<h3 id="reference--httpsdocsopenvinscomfejhtml">Reference : https://docs.openvins.com/fej.html</h3>
+<h3 id="self-use-note-自用笔记">self-use-note 自用笔记</h3>
+
+<h2 id="background">background</h2>
+
+<p>在VINS中 关注 <strong>observability</strong> (能观性) 和  <strong>consistency</strong> (一致性)
+可以作为研究系统退化的切入点</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Naive EKF-based VINS estimators have been shown to be inconsistent due to spurious information gain along unobservable directions and have required the creation of "observability aware" filters which explicitly address the inaccurate information gains causing filter over-confidence (the estimated uncertainty is smaller than the true)'
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">由于沿不可观测方向存在虚假的信息增益，基于 EKF 的非直接 VINS 估计器已被证明是不一致的，因此需要创建 "可观测性感知 "滤波器，以明确解决造成滤波器过度置信（估计的不确定性小于真实的不确定性）的不准确信息增益问题。</code></p>
+
+<p>一致性是滤波优化的必要条件,错误的协方差会产生错误的增益。</p>
+
+<p><strong>First-estimates Jacobian (FEJ)</strong> 方法被提出，用于:</p>
+<ul>
+  <li>保证VINS的<strong>observability</strong></li>
+  <li>提升<strong>consistency</strong></li>
+</ul>
+
+<h2 id="ekf-linearized-error-state-system">EKF Linearized Error-State System</h2>
+
+<p>openvins用到的经典的pvq模型:
+\(\begin{align*} \mathbf{x}_k &amp;= \begin{bmatrix} {}_G^{I_{k}} \bar{q}{}^{\top} &amp; {}^G\mathbf{p}_{I_k}^{\top} &amp; {}^G\mathbf{v}_{I_k}^{\top} &amp; {}^G\mathbf{p}_{f}^{\top} \end{bmatrix}^{\top} \end{align*}\)</p>
+
+<p>经典的 error-state update:</p>
+
+\[\begin{align*} \tilde{\mathbf{x}}_{k|k-1} &amp;= \mathbf{\Phi}_{(k,k-1)}~\tilde{\mathbf{x}}_{k-1|k-1} + \mathbf{G}_{k}\mathbf{w}_{k} \\ \tilde{\mathbf{z}}_{k} &amp;= \mathbf{H}_{k}~\tilde{\mathbf{x}}_{k|k-1}+\mathbf{n}_{k} \end{align*}\]
+
+<p>状态转移矩阵 \({\Phi}_{(k,k-1)}\):</p>
+
+<p>\(\begin{align*} \mathbf{\Phi}_{(k,k-1)}&amp;= 
+\begin{bmatrix} 
+{}^{I_{k}}_{I_{k-1}}\mathbf R &amp; \mathbf 0_{3\times3} &amp; \mathbf 0_{3\times3} &amp; \mathbf 0_{3\times3} \\[1em] 
+ -{}^{I_{k-1}}_{G}\mathbf{R}^\top \lfloor \boldsymbol\alpha(k,k-1) \times\rfloor &amp; \mathbf I_{3\times3} &amp; (t_{k}-t_{k-1})\mathbf I_{3\times3} &amp; \mathbf 0_{3\times3} \\[1em] 
+ -{}^{I_{k-1}}_{G}\mathbf{R}^\top \lfloor \boldsymbol\beta(k,k-1) \times\rfloor &amp; \mathbf 0_{3\times3} &amp; \mathbf I_{3\times3} &amp; \mathbf 0_{3\times3} \\[1em]
+ \mathbf 0_{3\times3} &amp; \mathbf 0_{3\times3} &amp; \mathbf 0{3\times3} &amp; \mathbf I_{3\times3} \end{bmatrix} 
+\end{align*}\)
+\(\begin{align*}
+\boldsymbol\alpha(k,k-1) &amp;= \int_{t_{k-1}}^{k} \int_{t_{k-1}}^{s} {}^{I_{k-1}}_{\tau}\mathbf R (\mathbf a(\tau)-\mathbf b_a - \mathbf w_a) d\tau ds \\ 
+\boldsymbol\beta(k,k-1) &amp;= \int_{t_{k-1}}^{t_k} {}^{I_{k-1}}_{\tau}\mathbf R (\mathbf a(\tau)-\mathbf b_a - \mathbf w_a) d\tau 
+\end{align*}\)</p>
+
+<p>测量雅各比(measurement Jacobian Matrix) \({H}_{k}\):</p>
+
+\[\begin{align*} \mathbf{H}_{k} &amp;= \mathbf H_{proj,k}~\mathbf H_{state,k} \\ &amp;= \begin{bmatrix} \frac{1}{Iz} &amp; 0 &amp; \frac{-{}^Ix}{({}^Iz)^2} \\ 0 &amp; \frac{1}{Iz} &amp; \frac{-{}^Iy}{({}^Iz)^2} \\ \end{bmatrix} \begin{bmatrix} \lfloor {}^{I_k}_{G}\mathbf{R}({}^{G}\mathbf{p}_f-{}^{G}\mathbf{p}_{I_k}) \times\rfloor &amp; -{}^{I_k}_{G}\mathbf{R} &amp; \mathbf 0_{3\times3} &amp; {}^{I_k}_{G}\mathbf{R} \end{bmatrix} \\
+&amp;= \mathbf H_{proj,k}~ 
+{}^{I_k}_{G}\mathbf{R} 
+\begin{bmatrix} 
+\lfloor ({}^{G}\mathbf{p}_f-{}^{G}\mathbf{p}_{I_k}) \times\rfloor 
+{}^{I_k}_{G}\mathbf{R}^\top &amp; 
+-\mathbf I_{3\times3} &amp; 
+\mathbf 0_{3\times3} &amp; 
+\mathbf I_{3\times3} 
+\end{bmatrix} 
+\end{align*}\]
+
+<h2 id="linearized-system-observability">Linearized System Observability</h2>
+
+<p>能观性矩阵 \(\mathcal{O}\): 若 \(\mathcal{O}\) 列满秩，则完全能观。它的零空间则描述了无法用给定测量恢复的不可观状态子空间</p>
+
+\[\begin{align*} \mathcal{O}= \begin{bmatrix} \mathbf{H}_{0}\mathbf{\Phi}_{(0,0)} \\ \mathbf{H}_{1}\mathbf{\Phi}_{(1,0)} \\ \mathbf{H}_{2}\mathbf{\Phi}_{(2,0)} \\ \vdots \\ \mathbf{H}_{k}\mathbf{\Phi}_{(k,0)} \\ \end{bmatrix} \end{align*}\]
+
+<p>他的零空间 \(\mathcal{N}\) 为4dof，对应于YAW和global xyz translation:</p>
+
+\[\begin{align*} \mathcal{N} &amp;= \begin{bmatrix} {}^{I_{0}}_{G}\mathbf{R}{}^G\mathbf{g} &amp; \mathbf 0_{3\times3} \\ -\lfloor {}^{G}\mathbf{p}_{I_0} \times\rfloor{}^G\mathbf{g} &amp; \mathbf{I}_{3\times3} \\ -\lfloor {}^{G}\mathbf{v}_{I_0} \times\rfloor{}^G\mathbf{g} &amp; \mathbf{0}_{3\times3} \\ -\lfloor {}^{G}\mathbf{p}_{f} \times\rfloor{}^G\mathbf{g} &amp; \mathbf{I}_{3\times3} \\ \end{bmatrix} \end{align*}\]
+
+<h2 id="first-estimate-jacobians">First Estimate Jacobians</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'It has been showed that standard EKF based-VINS, which always computes the state translation matrix and the measurement Jacobian using the current state estimates, has the global yaw orientation appear to be observable and has an incorrectly reduced 3dof nullspace dimention. This causes the filter mistakenly gaining extra information and becoming overconfident in the yaw.
+To solve this issue, the First-Estimate Jacobains (FEJ)methodology can be applied. It evaluates the linearized system state transition matrix and Jacobians at the same estimate (i.e., the first estimates) over all time periods and thus ensures that the 4dof unobservable VINS subspace does not gain spurious information. The application of FEJ is simple yet effective, let us consider how to modify the propagation and update linearizations.'
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">已经表明，基于标准 EKF 的 VINS 始终使用</code><strong><code class="language-plaintext highlighter-rouge">当前状态估计</code></strong><code class="language-plaintext highlighter-rouge">来计算状态转换矩阵和测量雅可比行列式，其全局偏航方向似乎是可观察的，并且具有错误减少的 3dof 零空间维度。 这会导致滤波器错误地获取额外信息并对偏航变得过于自信。</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">为了解决这个问题，可以应用FEJ方法。 它在所有时间段内以相同的估计（即第一次估计）评估线性化系统状态转移矩阵和雅可比行列式，从而确保 4dof 不可观测的 VINS 子空间不会获得虚假信息。 FEJ 的应用简单而有效，让我们考虑如何修改传播和更新线性化。</code></p>
+
+<h3 id="propagation">Propagation</h3>
+<p>Guoquan Huang老师提出更加正确的状态转移矩阵更新方式，表明:
+不是
+\(\begin{align*} \mathbf{\Phi}_{(k+1,k-1)}(\mathbf{x}_{k+1|k},\mathbf{x}_{k-1|k-1}) \neq \mathbf{\Phi}_{(k+1,k)}(\mathbf{x}_{k+1|k},\mathbf{x}_{k|k}) ~ \mathbf{\Phi}_{(k,k-1)}(\mathbf{x}_{k|k-1},\mathbf{x}_{k-1|k-1}) \end{align*}\)
+而是
+\(\begin{align*} \mathbf{\Phi}_{(k+1,k-1)}(\mathbf{x}_{k+1|k},\mathbf{x}_{k-1|k-1}) = \mathbf{\Phi}_{(k+1,k)}(\mathbf{x}_{k+1|k},\mathbf{x}_{k|k-1}) ~ \mathbf{\Phi}_{(k,k-1)}(\mathbf{x}_{k|k-1},\mathbf{x}_{k-1|k-1}) \end{align*}\)</p>
+
+<p>区别就是在于不同的时间节点线性化评估</p>
+
+<h3 id="update">Update</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>具体来说，位姿采用propagated值而非updated值，landmark使用第一次估计值。First Estimate就是这个直观含义，即采用estimation from the first time。
+</code></pre></div></div>
+<p>—- 如何理解SLAM中的First-Estimates Jacobian？ - jing胖的回答 - 知乎
+https://www.zhihu.com/question/52869487/answer/132517493</p>
+
+<h2 id="comments-注释">comments 注释</h2>]]></content><author><name></name></author><category term="sample-posts" /><category term="math" /><summary type="html"><![CDATA[notes of First-Estimate Jacobian]]></summary></entry><entry><title type="html">a post with math</title><link href="https://raymond-lau-lyf.github.io/blog/2015/math/" rel="alternate" type="text/html" title="a post with math" /><published>2015-10-20T15:12:00+00:00</published><updated>2015-10-20T15:12:00+00:00</updated><id>https://raymond-lau-lyf.github.io/blog/2015/math</id><content type="html" xml:base="https://raymond-lau-lyf.github.io/blog/2015/math/"><![CDATA[<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
 
 <p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:</p>
 
