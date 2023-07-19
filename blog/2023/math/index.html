@@ -238,6 +238,24 @@
 
 <h3 id="update">Update</h3>
 
+<p>指出了一般情况下，nullspace的第一列都是无效的： For example, the feature estimate in each row of  are different, thus the nullsace does not hold.</p>
+
+<p>使得能观性矩阵的维数退化成3</p>
+
+<p>需要选择first state estimate</p>
+
+<p>就得到了想要的线性化测量更新函数(linearized measurement update function):</p>
+
+\[\begin{align*} \tilde{\mathbf{z}}_{k+1} = \mathbf{z}_{k+1} - \mathbf{h}(\hat{\mathbf{x}}_k) \simeq \bar{\mathbf{H}}_{k} (\mathbf{x}_{k} -\hat{\mathbf{x}}_k ) + \mathbf{n}_k \end{align*}\]
+
+<p>\(\bar{\mathbf{H}}_{k}\)
+是第一估计雅可比行列式，仅包含第一状态估计
+\(\bar{\mathbf{x}_{k}}\)</p>
+
+<p>使用FEJ可以保留系统的能观性</p>
+
+<p>虽然这样做会引入线性化误差，但是Guoquan Huang老师等人认为inconsistencies对系统的副作用还是更大。FEJ2[Chuchu Chen, Yulin Yang, Patrick Geneva, and Guoquan Huang. Fej2: A consistent visual-inertial state estimator design. In 2022 International Conference on Robotics and Automation (ICRA), 2022.],OC[Guoquan P Huang, Anastasios I Mourikis, and Stergios I Roumeliotis. Observability-based rules for designing consistent ekf slam estimators. The International Journal of Robotics Research, 29(5):502–528, 2010.]等工作也在试图解决这个问题,在补偿或利用最佳估计的同时，解决确保正确可观测性的问题。</p>
+
 <p><code class="language-plaintext highlighter-rouge">具体来说，位姿采用propagated值而非updated值，landmark使用第一次估计值。First Estimate就是这个直观含义，即采用estimation from the first time。</code></p>
 
 <p>—- 如何理解SLAM中的First-Estimates Jacobian？ - jing胖的回答 - 知乎

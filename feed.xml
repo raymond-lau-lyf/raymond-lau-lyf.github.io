@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://raymond-lau-lyf.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://raymond-lau-lyf.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-19T18:06:38+00:00</updated><id>https://raymond-lau-lyf.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://raymond-lau-lyf.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://raymond-lau-lyf.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-19T21:57:28+00:00</updated><id>https://raymond-lau-lyf.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">notes of FEJ</title><link href="https://raymond-lau-lyf.github.io/blog/2023/math/" rel="alternate" type="text/html" title="notes of FEJ" /><published>2023-07-18T15:12:00+00:00</published><updated>2023-07-18T15:12:00+00:00</updated><id>https://raymond-lau-lyf.github.io/blog/2023/math</id><content type="html" xml:base="https://raymond-lau-lyf.github.io/blog/2023/math/"><![CDATA[<h3 id="reference--httpsdocsopenvinscomfejhtml">Reference : https://docs.openvins.com/fej.html</h3>
 <h3 id="self-use-note-自用笔记">self-use-note 自用笔记</h3>
 
@@ -91,6 +91,24 @@
 <p>区别就是在于不同的时间节点线性化评估</p>
 
 <h3 id="update">Update</h3>
+
+<p>指出了一般情况下，nullspace的第一列都是无效的： For example, the feature estimate in each row of  are different, thus the nullsace does not hold.</p>
+
+<p>使得能观性矩阵的维数退化成3</p>
+
+<p>需要选择first state estimate</p>
+
+<p>就得到了想要的线性化测量更新函数(linearized measurement update function):</p>
+
+\[\begin{align*} \tilde{\mathbf{z}}_{k+1} = \mathbf{z}_{k+1} - \mathbf{h}(\hat{\mathbf{x}}_k) \simeq \bar{\mathbf{H}}_{k} (\mathbf{x}_{k} -\hat{\mathbf{x}}_k ) + \mathbf{n}_k \end{align*}\]
+
+<p>\(\bar{\mathbf{H}}_{k}\)
+是第一估计雅可比行列式，仅包含第一状态估计
+\(\bar{\mathbf{x}_{k}}\)</p>
+
+<p>使用FEJ可以保留系统的能观性</p>
+
+<p>虽然这样做会引入线性化误差，但是Guoquan Huang老师等人认为inconsistencies对系统的副作用还是更大。FEJ2[Chuchu Chen, Yulin Yang, Patrick Geneva, and Guoquan Huang. Fej2: A consistent visual-inertial state estimator design. In 2022 International Conference on Robotics and Automation (ICRA), 2022.],OC[Guoquan P Huang, Anastasios I Mourikis, and Stergios I Roumeliotis. Observability-based rules for designing consistent ekf slam estimators. The International Journal of Robotics Research, 29(5):502–528, 2010.]等工作也在试图解决这个问题,在补偿或利用最佳估计的同时，解决确保正确可观测性的问题。</p>
 
 <p><code class="language-plaintext highlighter-rouge">具体来说，位姿采用propagated值而非updated值，landmark使用第一次估计值。First Estimate就是这个直观含义，即采用estimation from the first time。</code></p>
 
