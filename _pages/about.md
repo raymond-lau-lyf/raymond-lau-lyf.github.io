@@ -6,10 +6,11 @@ subtitle: <a href=mailto:raymond.lau.lyf@gmail.com>raymond.lau.lyf@gmail.com</a>
 
 profile:
   align: right
-  image: raymond_bule_pic.jpg
+  # image: raymond_bule_pic.jpg
+  image: 
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>Shenzhen,China</p>
+  # address: >
+  #   <p>Shenzhen,China</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
