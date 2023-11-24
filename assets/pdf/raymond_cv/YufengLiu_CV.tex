@@ -52,34 +52,32 @@
 \hypersetup{urlcolor=black}
 \item Achieved a simulation system in \href{https://gazebosim.org/api/gazebo/2.10/index.html}{Ignition Gazebo} for SLAM in complex extreme environments.
 \item Deployed our \hyperref[sec:Publications]{ETIO} in the real world and conducted experiments in the real world and datasets.
-\item Familiar with the system framework of Monocular VIOs like VINS-Mono, etc.
-\item Skilled in  VIO deployment in the real world.
 \item Skilled in thermal image processing.
+\item Familiar with the system framework of VIOs like VINS-Mono, ORB-SLAM3, etc.
 \end{itemize}
 \item Proposing a SLAM framework that fuses thermal camera, LiDAR, and IMU.
 \begin{itemize}%
-\item Built a code framework fused sensors using ESIKF and factor graph optimization. 
-\item Skilled in ways to achieve multi-sensor extrinsic parameter calibration.
-\item Skilled in approaches to perform time synchronization between sensors, including PTP, and PPS, GNSS triggered or STM32 triggered.
-\item Familiar with the system framework of LIO or LVIO like FAST-LIO, LIO-SAM, LVI-SAM, R2Live, R3Live, FAST-LIVO, etc.
+\item Designed a new multi-sensor SLAM framework specially designed for sensor-degraded scenes independently. 
+\item Skilled in multi-sensor calibration.
+\item Skilled in approaches to perform time synchronization between sensors, including PTP, PPS, GNSS triggered or MCU triggered.
+\item Familiar with common multi-sensor SLAM frameworks like LVI-SAM, R2Live, R3Live, FAST-LIVO, etc.
 \end{itemize}
-\item Participated in the implementation of a SLAM system integrated planning and dynamic obstacle avoidance.  
+\item Participated in the implementation of a SLAM system integrated planning and dynamic obstacle avoidance.
 \begin{itemize}%
-\item Achieved a pointcloud object detection system detecting moving targets.
-\item Applied deep-learning method for removing dynamic objects from pointcloud data to optimize the LiDAR odometry.
-\item Implemented shared memory method to accelerate the transfer of point cloud data between a C++ ROS node and a Python PyTorch-based detection node.
+\item Applied deep-learning method for target detection to optimize the LiDAR odometry.
+\item Designed shared memory method for pointcloud data acceleration.
 \end{itemize}
 \end{itemize}
 }
 
-\cventry{Oct.2022--present}{}{Teleoperated robot equipped with a VR remote-controlled gimbal system.}{\href{https://www.nrs-lab.com/}{nROS-Lab},HITsz}{}%
+\cventry{Oct.2022--Sept.2023}{}{Teleoperated robot equipped with a VR remote-controlled gimbal system.}{\href{https://www.nrs-lab.com/}{nROS-Lab},HITsz}{}%
 {
 \begin{itemize}%
 \item Designed a two-axis gimbal with sensors for mobile robots:
 \begin{itemize}%
-\item Designed the 3D model using SolidWorks and implemented real-time embedded control.
-\item Developed a ROS node that subscribes to human control commands through Unity-ROS-TCP-Endpoint from a remote location and sends control messages to the STM32.
-\item Developed Multi-sensor SLAM algorithm on the gimbal.  
+\item Designed the 3D model and implemented real-time embedded control.
+\item Developed a framework for human-computer interaction, as well as a VR application.
+\item Deployed Multi-sensor SLAM algorithm on the gimbal.  
 \end{itemize}
 \end{itemize}
 }
@@ -91,8 +89,8 @@
 \begin{itemize}
 \item Designed a fully automatic inspection and combat integrated robot.
 \item Coordinated task allocation and fostered collaboration among team members as team leader.
-\item Responsible for embedded control systems for the robot. 
-\item Developed target aiming algorithm framework, including YOLO detection, EKF tracking, modeling, etc.
+\item Responsible for embedded. 
+\item Developed target aiming algorithm framework, including target detection tracking.
 \end{itemize}
 \end{itemize}
 }
@@ -100,24 +98,25 @@
 \cventry{May.2022--Dec.2022}{}{Underwater grab robot control and navigation}{Lujian Technology Ltd. Co.,Shenzhen}{}%
 {
 \begin{itemize}%
-    \item Participated in the research of underwater robot design and contributed to the execution of underwater motion control with STM32, IMU and underwater motors.
-    \item Achieved a mono VIO system in Gazebo which suits the underwater environment and a controller with the joystick.
-    \item Achieved learning based underwater target detection(YOLO).
+    \item Participated in the design of an underwater robot  
+    \item Responsible for visual-inertial odometry and planning in underwater environments.
+    \item Responsible for embedded motion control.
+    \item Achieved a learning-based underwater target detection.
 \end{itemize}
 }
-\cventry{}{}{More detailed experiences can be explored at \href{https://raymond-lau-lyf.github.io/projects/}{Here}.}{}{}%
+\cventry{}{}{More detailed experiences can be explored at \href{https://raymond-lau-lyf.github.io/projects/}{Website}.}{}{}%
 {}
 
 \section{Skills}
 \cvitem{}{Programming: C++, C, Python, MATLAB}
 \cvitem{}{Software\&tools: ROS, OpenCV, Gazebo, PCL, GTSAM, Ceres, Git, PyTorch, LaTeX, Qt Creator, Unity }
 \cvitem{}{Hardware: STM32, SolidWorks}
-\cvitem{}{My Focus: SLAM, Robotics}
+\cvitem{}{Research Interests: SLAM, Robotics}
 
 
 \section{Publications}
 \label{sec:Publications}
-\cvitem{}{[1] Yu Wang, Haoyao Chen*, \textbf{Yufeng Liu}, and Shiwu Zhang. Edge-based monocular thermal-inertial odometry in visually degraded environments. IEEE Robotics and Automation Letters(RA-L), 8(4):2078-2085, 2023. \href{https://arxiv.org/abs/2210.10033}{[arxiv]}}
+\cvitem{}{[1] Yu Wang, Haoyao Chen, \textbf{Yufeng Liu}, and Shiwu Zhang. Edge-based monocular thermal-inertial odometry in visually degraded environments. IEEE Robotics and Automation Letters(RA-L), 8(4):2078-2085, 2023. \href{https://ieeexplore.ieee.org/document/10048516}{[link]} \href{https://arxiv.org/abs/2210.10033}{[arxiv]}}
 % \cvitem{}{[2] Edge-Feature-Based, Degradation-Aware Thermal-Inertial-LiDAR Odometry. (Submissions in progress as Co-First Author)}
 % \cvitem{}{[3] e2vio: Enhanced Edge-based Visual-Inertial Odometry. (Submissions in progress as Co-First Author)}
 
