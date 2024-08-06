@@ -6,4 +6,4 @@ img: assets/img/gimbal.png
 importance: 3
 category: Research
 ---
-Sorry, the project is still ongoing, I will update this page when the project is fully completed.
+The project is still ongoing and I will update this page when the project is fully completed.
