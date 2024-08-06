@@ -28,4 +28,4 @@ Hi there!:sparkles:I'm Yufeng Liu(刘羽丰), a student interested in `SLAM` and
 
 <!-- [My Selected Publications](https://raymond-lau-lyf.github.io/publications/) -->
 
-I also like cycling:bicyclist:, badminton:tennis:, skiing:snowboarder:, basketball:basketball:, swimming:swimmer:, soccer:soccer:, anime, console games, sci-fi movies, self-driving-tour, traveling
+<!-- I also like cycling:bicyclist:, badminton:tennis:, skiing:snowboarder:, basketball:basketball:, swimming:swimmer:, soccer:soccer:, anime, console games, sci-fi movies, self-driving-tour, traveling -->
